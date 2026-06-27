@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Yovi - Presentación de Arquitectura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
+
+    <style>
+        :root {
+            --bg: #282a36;
+            --panel: rgba(255,255,255,0.08);
+            --panel-strong: rgba(255,255,255,0.13);
+            --green: #50fa7b;
+            --yellow: #f1fa8c;
+            --purple: #bd93f9;
+            --cyan: #8be9fd;
+            --red: #ff5555;
+            --text: #f8f8f2;
+        }
+
+        .reveal { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { letter-spacing: -0.04em; text-transform: none; }
+        .reveal h2 { font-size: 1.75em; margin-bottom: 0.35em; }
+        .reveal h3 { font-size: 0.78em; margin: 0; }
+        .reveal p { line-height: 1.25; }
+        .reveal .slides section { padding-bottom: 0.25em; }
+
+        .success { color: var(--green); }
+        .danger { color: var(--red); }
+        .warning { color: var(--yellow); }
+        .muted { color: var(--purple); }
+        .cyan { color: var(--cyan); }
+        .small { font-size: 0.58em; opacity: 0.86; }
+        .tiny { font-size: 0.42em; opacity: 0.72; }
+        .big { font-size: 1.25em; font-weight: 800; }
+
+        .hero-title { font-size: 2.6em; margin-bottom: 0.1em; }
+        .subtitle { font-size: 0.78em; opacity: 0.86; }
+        .screen-title { display: flex; justify-content: center; align-items: center; gap: 0.25em; }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25em;
+            padding: 0.22em 0.62em;
+            border: 2px solid currentColor;
+            border-radius: 999px;
+            margin: 0.12em;
+            font-size: 0.48em;
+            font-weight: 700;
+            background: rgba(255,255,255,0.035);
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.55em; align-items: stretch; }
+        .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.58em; align-items: stretch; }
+        .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.45em; align-items: stretch; }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 24px;
+            padding: 0.62em 0.55em;
+            min-height: 3.1em;
+            box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+        }
+        .card.strong { background: var(--panel-strong); transform: translateY(-0.04em); }
+        .card p { margin: 0.32em 0 0 0; font-size: 0.44em; opacity: 0.82; }
+        .emoji { font-size: 1.25em; display: block; margin-bottom: 0.18em; }
+
+        .flow { display:flex; justify-content:center; align-items:center; gap:0.38em; flex-wrap:wrap; margin-top:0.7em; }
+        .flow .box {
+            border-radius: 22px;
+            padding: 0.62em 0.8em;
+            background: var(--panel);
+            border: 1px solid rgba(255,255,255,0.13);
+            min-width: 4.2em;
+        }
+        .flow .box b { font-size: 0.68em; }
+        .flow .box span { display: block; font-size: 0.38em; opacity: 0.72; margin-top: 0.25em; }
+        .arrow { font-size: 1em; color: var(--cyan); opacity: 0.9; }
+
+        .metric {
+            font-size: 1.45em;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 0.12em;
+        }
+
+        .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0.8em; align-items: center; }
+        .mini-list { text-align: left; font-size: 0.58em; line-height: 1.55; }
+        .mini-list div { margin: 0.25em 0; }
+        .only { font-size: 1.05em; font-weight: 800; }
+
+        code { color: var(--yellow); }
+        pre { border-radius: 18px; overflow: hidden; }
+
+        .footer {
+    position: fixed;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    font-size: 0.9em;          /* ⬅️ más grande */
+    font-weight: 600;          /* ⬅️ más legible */
+    color: var(--text);        /* ⬅️ mismo color que texto general */
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.footer .left {
+    position: absolute;
+    left: 24px;
+    opacity: 0.85;             /* ligero suavizado */
+}
+
+.footer .center {
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    pointer-events: auto;
+    color: var(--cyan);        /* ⬅️ mantiene estilo visual */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+        @media (max-width: 900px) {
+            .grid, .grid2, .grid4, .split { grid-template-columns: 1fr; }
+            .reveal h2 { font-size: 1.35em; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="reveal">
+  <div class="slides">
+
+<!-- ================= PORTADA ================= -->
+<section data-background-gradient="linear-gradient(to bottom, #282a36, #44475a)">
+    <h1>Yovi <span class="success">v1.0</span></h1>
+
+    <p class="small">Arquitectura del Software</p>
+    <p class="small">Grupo es1b · Curso 2025/2026</p>
+    <p class="small">28/04/2026</p>
+
+    <div class="small" style="margin-top: 70px;">
+        Nahiara Sánchez García | UO295645<br>
+        Diego Abeijon Rodriguez | UO295689<br>
+        Moisés Montes Iglesias | UO296102<br>
+        Eva Menéndez Hernández | UO300181<br>
+        Hugo Tejedor Arcoitza | UO295339
+    </div>
+</section>
+
+<section>
+    <h2>¿Qué es <span class="success">Yovi</span>?</h2>
+    <p class="big">Digitalización del Juego Y</p>
+
+    <div style="margin-top:0.85em;">
+        <span class="tag success">estrategia</span>
+        <span class="tag warning">web</span>
+        <span class="tag cyan">multijugador</span>
+        <span class="tag muted">bots</span>
+    </div>
+
+    <!-- 👇 AÑADIDO -->
+    <div style="margin-top:1.5em;">
+        <p class="small">Demo en vivo</p>
+        <p class="big">
+            <a href="https://158.158.9.72/" target="_blank" style="color:#8be9fd;">
+                https://158.158.9.72/
+            </a>
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Idea clave</h2>
+    <p class="big">No meterlo todo en el mismo sitio</p>
+    <div class="grid" style="margin-top:0.8em;">
+        <div class="card"><span class="emoji">🖥️</span><h3 class="success">Interfaz</h3><p>lo que ve el usuario</p></div>
+        <div class="card"><span class="emoji">🔐</span><h3 class="warning">Usuarios</h3><p>sesión, perfil, amigos</p></div>
+        <div class="card"><span class="emoji">🎲</span><h3 class="muted">Juego</h3><p>reglas y partidas</p></div>
+    </div>
+</section>
+
+<section>
+    <h2>Arquitectura y tecnologías</h2>
+
+    <div class="grid4">
+
+        <div class="card">
+            <span class="emoji">🖥️</span>
+            <h3 class="success">webapp</h3>
+            <p>React · TypeScript · Vite</p>
+            <p class="tiny">MPA · interfaz</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🔐</span>
+            <h3 class="warning">users</h3>
+            <p>Node.js · Express</p>
+            <p class="tiny">auth · integración</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🎲</span>
+            <h3 class="muted">gamey</h3>
+            <p>Rust</p>
+            <p class="tiny">motor · reglas</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🗄️</span>
+            <h3 class="cyan">Datos</h3>
+            <p>MongoDB</p>
+            <p class="tiny">database-per-service</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🐳</span>
+            <h3 class="success">Infraestructura</h3>
+            <p>Docker · Compose</p>
+            <p class="tiny">entorno reproducible</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🌐</span>
+            <h3 class="warning">Entrada</h3>
+            <p>Nginx · HTTPS</p>
+            <p class="tiny">reverse proxy</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">📊</span>
+            <h3 class="muted">Observabilidad</h3>
+            <p>Prometheus · Grafana</p>
+            <p class="tiny">métricas</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🔧</span>
+            <h3 class="cyan">Certificados</h3>
+            <p>mkcert</p>
+            <p class="tiny">HTTPS local</p>
+        </div>
+
+    </div>
+
+    <p class="small fragment">
+        Sistema dividido en partes independientes → más mantenible
+    </p>
+</section>
+
+<section>
+    <div style="margin-top:1em; text-align:center;">
+        <img src="./assets/ImagenArquitectura.jpeg" 
+             style="width:120%; max-height:100vh; object-fit:contain; border-radius:12px;">
+    </div>
+</section>
+
+<section>
+    <h2>Demo</h2>
+    <p class="big"><a href="https://158.158.9.72/" target="_blank" style="color:#8be9fd;">https://158.158.9.72/</a></p>
+    <div style="margin-top:0.8em;">
+        <span class="tag success">probar partida</span>
+        <span class="tag warning">perfil</span>
+        <span class="tag muted">amigos</span>
+        <span class="tag cyan">modo invitado</span>
+        <p style="margin-top:1em;">
+            <a href="./assets/TodaLaAplicacion.mp4" target="_blank" style="color:#8be9fd; font-size:1.2em;">
+                ▶ Ver demo completa
+            </a>
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Atributos de calidad</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <span class="emoji">🔒</span>
+            <h3 class="success">Seguridad</h3>
+            <p>JWT · bcrypt</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🔑</span>
+            <h3 class="warning">Autenticación</h3>
+            <p>HTTPS · cookies HttpOnly</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🧩</span>
+            <h3 class="muted">Mantenibilidad</h3>
+            <p>servicios · tests · SonarCloud</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">📈</span>
+            <h3 class="cyan">Escalabilidad</h3>
+            <p>microservicios independientes</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🎮</span>
+            <h3 class="success">Usabilidad</h3>
+            <p>i18next · modo invitado · tutorial</p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🚀</span>
+            <h3 class="warning">Desplegabilidad</h3>
+            <p>Docker · un solo comando</p>
+        </div>
+
+    </div>
+
+    <p class="small fragment">
+        Estas decisiones guían toda la arquitectura del sistema
+    </p>
+</section>
+
+<section>
+    <h2>Patrones clave</h2>
+
+    <!-- flujo principal -->
+    <div class="flow" style="margin-top:1em;">
+        <div class="box">
+            <b>webapp</b>
+            <span>MPA · interfaz</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div class="box">
+            <b>users</b>
+            <span>BFF · auth · integración</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div class="box">
+            <b>gamey</b>
+            <span>motor · reglas</span>
+        </div>
+    </div>
+
+    <!-- etiquetas de patrones -->
+    <div style="margin-top:1.5em;">
+        <span class="tag success">Microservicios</span>
+        <span class="tag warning">Database-per-Service</span>
+        <span class="tag muted">MPA</span>
+        <span class="tag cyan">BFF / API Gateway</span>
+    </div>
+
+    <!-- explicación mínima -->
+    <p class="small fragment" style="margin-top:1em;">
+        Cada servicio gestiona sus datos y responsabilidades
+    </p>
+</section>
+
+<section>
+    <h2>API de juego</h2>
+    <div class="flow">
+        <span class="tag success">YEN actual</span>
+        <span class="arrow">→</span>
+        <span class="tag warning">bot opcional</span>
+        <span class="arrow">→</span>
+        <span class="tag muted">PlayResponse</span>
+    </div>
+    <p class="small" style="margin-top:1em;">Contrato documentado con Swagger UI.</p>
+</section>
+
+<section>
+    <h2>Despliegue</h2>
+    <p class="big">Todo levantado con un comando</p>
+    <pre style="margin-top:0.8em;"><code class="hljs bash" data-trim>docker compose up --build</code></pre>
+    <div style="margin-top:0.55em;">
+        <span class="tag success">React</span>
+        <span class="tag warning">Node</span>
+        <span class="tag muted">Rust</span>
+        <span class="tag cyan">MongoDB</span>
+    </div>
+</section>
+
+<section>
+    <h2>Calidad de software</h2>
+    <div class="grid">
+        <div class="card"><span class="emoji">✅</span><h3 class="success">Pull Requests</h3><p>revisión cruzada</p></div>
+        <div class="card"><span class="emoji">⚙️</span><h3 class="warning">GitHub Actions</h3><p>CI automática</p></div>
+        <div class="card"><span class="emoji">📊</span><h3 class="muted">SonarCloud</h3><p>quality gate</p></div>
+    </div>
+</section>
+
+<section>
+    <h2>Observabilidad</h2>
+    <div class="grid2">
+        <div class="card"><span class="emoji">📡</span><h3 class="success">Prometheus</h3><p>recoge métricas</p></div>
+        <div class="card"><span class="emoji">📈</span><h3 class="warning">Grafana</h3><p>visualiza paneles</p></div>
+    </div>
+    <p class="small" style="margin-top:0.9em;">Latencia · peticiones · códigos de respuesta</p>
+</section>
+
+<section>
+    <div style="margin-top:1em; text-align:center;">
+        <img src="./assets/GrafanaImagen.jpeg" 
+             style="width:120%; max-height:100vh; object-fit:contain; border-radius:12px;">
+    </div>
+</section>
+
+<section>
+    <h2>Pruebas</h2>
+    <div class="grid">
+        <div class="card"><div class="metric success">Unit</div><p>componentes y lógica</p></div>
+        <div class="card"><div class="metric warning">E2E</div><p>Cucumber · Playwright</p></div>
+        <div class="card"><div class="metric muted">Carga</div><p>Gatling · 25 usuarios</p></div>
+    </div>
+    <div style="margin-top:0.65em;">
+        <span class="tag success">registro</span>
+        <span class="tag warning">login</span>
+        <span class="tag muted">partida</span>
+        <span class="tag cyan">amigos</span>
+    </div>
+</section>
+
+<section>
+    <h2>Estado actual</h2>
+
+    <div class="grid2">
+        <div class="card strong">
+            <h3 class="success">Base sólida</h3>
+            <p>pruebas, HTTPS, autenticación, análisis estático</p>
+        </div>
+
+        <div class="card strong">
+            <h3 class="warning">Mejoras</h3>
+            <p>authMiddleware, CORS, OpenAPI de users</p>
+        </div>
+    </div>
+
+    <!-- 👇 Imagen fuera del grid -->
+    <div style="margin-top:1.2em; display:flex; justify-content:center;">
+        <img src="./assets/Captura Github.png" 
+             style="width:95%; max-height:65vh; object-fit:contain; border-radius:12px;">
+    </div>
+</section>
+
+<section>
+    <h2>Trabajo en equipo y deuda técnica</h2>
+
+    <div class="grid2">
+        <div class="card">
+            <h3 class="success">Organización inicial</h3>
+            <p>
+                División por roles:<br>
+                Backend · Frontend · Full-stack
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="warning">Evolución</h3>
+            <p>
+                Acabamos trabajando en todo el proyecto
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="muted">Git</h3>
+            <p>
+                Ramas por persona ❌<br>
+                → Mejor por funcionalidad
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="danger">Deuda técnica</h3>
+            <p>
+                Tests pendientes (E2E y funcionales)<br>
+                → Sprint final para completarlos
+            </p>
+        </div>
+    </div>
+
+    <p class="small fragment">
+        Proyecto compatible con otras asignaturas → impacto en tiempos
+    </p>
+</section>
+
+<section>
+    <h2>Lecciones aprendidas</h2>
+    <div class="grid">
+        <div class="card"><span class="emoji">🏗️</span><h3 class="success">Arquitectura</h3><p>decidir antes de crecer</p></div>
+        <div class="card"><span class="emoji">🦀</span><h3 class="warning">Rust</h3><p>más coste, menos errores</p></div>
+        <div class="card"><span class="emoji">🐳</span><h3 class="muted">Docker</h3><p>mismo entorno para todos</p></div>
+    </div>
+</section>
+
+<section>
+    <h2>¿Preguntas?</h2>
+    <p class="big">Gracias</p>
+    <p class="small">Yovi funciona hoy y está preparado para crecer.</p>
+</section>
+
+</div>
+</div>
+
+<!-- footer fuera -->
+<div class="footer">
+    <div class="left">28/04/2026</div>
+    <div class="center">
+        <a href="https://158.158.9.72/" target="_blank">
+            https://158.158.9.72/
+        </a>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        plugins: [ RevealHighlight, RevealNotes ],
+        transition: 'convex',
+        slideNumber: true
+    });
+</script>
+</body>
+</html>
