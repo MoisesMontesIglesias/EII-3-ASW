@@ -1,0 +1,137 @@
+Apuntes ASW:
+-------------------------------------------------------
+Utilitas, firmitas y venustas NO ENTRA EN EL EXAMEN
+-------------------------------------------------------
+Una buena arquitectura, tiene 3 pilares: utilidad, durabilidad y elegancia
+
+Todo software tiene arquitectura, pero puede no estar definida
+
+Stakeholders: Personas interesadas en el programa/proyecto
+
+Diferencia diseño vs arquitectura
+Diseño: Decisiones que puedes tomar de una forma previa y buscando la más óptima. Si luego cambias de decisión no implica mucho problema
+Las decisiones de arquitectura, son decisiones principales, y si luego te arrepientes y quiere cambiar esa decisión, suelen ser un problema grande o difícil de hacer. P.e: Cambiar el lenguaje de programación, cambiar el tipo de BB.DD
+
+Un arquitecto debe de tomar buenas decisiones para hacer las cosas
+La mentalidad de un buen arquitecto, es cuando el preguntas sobre algo, y da una respuesta firme, debería hacerte desconfiar de él, pero debería de responder un depende según lo que necesites. Es decir, tiene que tener capacidad para identificar las cosas buenas y malas de cada decisión posible.
+
+Arquitectura de edificios, suelen ser situaciones similares. Sin embargo, en arquitectura del software, pueden cambiar los requisitos en cualquier momento del proceso.
+
+Es muy importante, identificar los riesgos a la hora de tomar una decisión y dejarlas estipuladas (issues). No tienen porque ser resueltos, pero debe de quedar constancia de ello.
+En la práctica, debes de indicar el issue y documentarlo.
+
+Un buen arquitecto, debe de estar en contacto y comunicación con el equipo de desarrollo, para que trabajéis de forma conjuntamente.
+Big Design Up-Front: Es cuando haces un diseño donde intentas abarcar todo de primera mano, el diseño debe de ir incrementándose según se avanza pero con una muy buena base
+
+Seguramente caiga en el examen una ley de la arquitectura del software
+1era ley: Todo en arquitectura tiene una decisión con sus inconvenientes y ventajas, un arquitecto debe de tener ambas en cuenta y tomar una decisión en consecuencia.
+Si crees que no hay solución de compromiso, es decir, solo hay una única forma de hacer algo, es que no lo estás viendo bien.
+
+2nda ley: 
+Es más importante porque utilizas las cosas que el como las vas a utilizar.
+
+Motivaciones de la arquitectura:
+- Objetivos de diseño. Aclarar porque se diseña en ese sistema.
+- Requisitos funcionales. Funcionalidad, que hace.
+- Atributos de calidad o requisitos no funcionales. Características medibles que interesan a usuarios o desarrolladores
+El motor Rust, funciona mucho más rápido que otros sistemas en ejecución
+- Restricciones: (IMPORTANTE) Una restricción es algo que viene impuesto. Que programemos en RUST es una restricción. Es una decisión de la que no hay que hacerse responsables.
+- Preocupaciones: Decisiones que se toman que no están descritas explícitamente en objetivos o requisitos. P.e: Validar que el nombre en un registro cumpla ciertos criterios, como puede ser que no tenga nombre vacío o espacios en blanco.
+
+Creatividad vs método
+Hay que diferenciar que es lo que buscamos y encontrar un punto medio
+
+Sistemas greenfield: Trabajar en dominios nuevos o maduros. 
+Sistemas brownfield: Trabajar sobre un software que ya existe, mejorarlo.
+
+-------------------------------------------------------------------------------------------
+
+Una documentación extensa pero con poco sentido, es mejor no ponerla
+La documentación debe ser corta, explícita y no contar rollo por contar
+Un anti-patrón, es tener una documentación que no este sincronizada con el código
+Ahora, hay que hacer la documentación dentro del código.
+
+Reglas para documentación
+La gente que va a leer la documentación, son los stakeholders.
+- evitar repetir cosas (Dont Repeat Yourself (DRY))
+- Utilizar una plantilla
+- Registrar la toma de decisiones
+
+El objetivo de una documentación es, tras ver un problema, mostrar el camino del problema a la solución
+
+Hay diferentes puntos de vista para un mismo software, p.e: Un diagrama de clases, el diagrama de despliegue
+ 
+La documentación debe de ser consistentes e uniformes
+Evitar paletas de colores muy variadas, es decir, evitar demasiados detalles
+
+Bocetos: Es un diseño básico e inicial de un diagrama o ideas principales del proyecto
+A partir de ese boceto, se "pasa a limpio", utilizando herramientas de dibujo de diagramas
+Recomendado: draw.io o PowerPoint o ByteByteGo o PlantUML
+
+Existen herramientas de ingeniería inversa. Se utilizan para pasar de código a generar diagramas (el proceso inverso). Un problema que tiene, es que puede coger demasiados detalles, y coge información que no es muy importante y abruma ya que recoge demasiada información
+
+ADLs: En vez de diagramas, genera descripciones textuales. Poco usados 
+
+Plantillas de documentaciones
+Modelo C4 y Arc42: 
+Vamos a utilizar el Arc42. 
+Es un archivador donde vas a poner diferentes partes de información.
+P.e: La vista de despliegue está en la sección 7, por lo que vas directamente a esa sección del archivador.
+Sección 1: Introducción y objetivos Requisitos y objetivos de calidad principales. Stakeholders
+Sección 2: Restricciones
+Sección 3: Contexto
+Sección 4: Estrategia de solución
+Sección 5: Bloques 
+Sección 6: Runtime View
+Sección 7: Diagrama de despliegue
+Sección 8: 
+Sección 9: Decisiones arquitectónicas
+Sección 10: Requisitos de calidad, árbol de calidad
+Sección 11: Riesgos y deuda técnica
+Sección 12: Glosario
+
+Código arquitectónicamente evidente
+Si tenemos la arquitectura en un sitio, en el código debe de verse claramente que hay una carpeta con esas características, que sea fácil enlazar bloques de documentación con la carpeta
+
+---------------------------------------------------------------
+
+Alguien con mentalidad de arquitecto de software, debe estar atento a las cosas que no sabemos ni que existen, a cosas que sabemos que no sabemos
+Debe de intentar que las cosas que no sepa ni que existen, convertirlas en cosas que sepa que existen pero que no saben
+
+Anti-patrón (malas prácticas en grupo)
+
+EN EL EXAMEN VA A CAER SEGURO -> Alguna de las métricas de Software
+
+Medidas operacionales -> Dependen del atributo. 
+Valores absolutos. Valores y modelos estadísticos
+
+99,99% es un buen tiempo de recuperacion/disponibilidad
+
+Medida estructural -> Complejidad ciclomática: Cuando tienes muchos bucles y condicionales, refactorizar el código para que sea más legible o fácil de entender
+
+Medidas de procesos ->
+
+4 métricas clave (DORA) 
+1. Tasa de fallos tras cambios: Cuantos cambios realizadas acaban siendo un fallo/error.
+2. Lead time to change: Caunto tardan en entrar en producción esos cambios
+3. Frecuencia de despliegue: Estas haciendo despliegue cada poco o cada mucho tiempo
+4. Tiempo medio de restauración: Si algo se cae, cuanto tiempo tardas en recuperarlo
+
+Generando atributos de calidad:
+Mides atributos de calidad, y compruebas que tu diseño pasa esos atributos de calidad, es decir, comprobar si tu proyecto supera los atributos de calidad y sigue mejorando.
+
+----------------------------------------------------------------
+Conferencia:
+1- Tener que desarrollar un espiritu/capacidad critica para separar lo que es señal a lo que es ruido
+Ruido: Mentiras o intereses comerciales, P.e: te quedaras sin trabajo por culpa de la IA
+Señal: Herramienta con la que cambiar la forma de trabajo
+
+2- 
+
+3- Trabajar con IA te da más oportunidades de empleo.
+
+En aplicaciones REST en el pdf del 18/03 a veces pregunta por HAOEST o algo asi
+
+
+
+

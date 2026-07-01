@@ -1,0 +1,797 @@
+1.- ¿Cuáles son las principales actividades del arquitecto de software? 
+O Servir de puente entre el equipo de desarrollo y los usuarios finales de la aplicación con el objetivo de definir los requisitos del sistema. 
+O Diseñar la arquitectura siguiendo los atributos de calidad definidos por los stakeholders. 
+X Trabajar con el equipo de requisitos, con los stakeholders, con el equipo de diseño técnico y con los gestores de proyecto para realizar el diseño de la arquitectura. 
+
+2.- CQRS… 
+O …es un modelo de mensajería que facilita la integración entre aplicaciones 
+X …propone separar el modelo en una parte que modifica el estado y otra que solamente lo consulta 
+O …es un sistema de control de releases de software  
+
+3.- ¿Cuál de las siguientes afirmaciones es correcta? 
+X GIT es un sistema de control de versiones distribuido 
+O CVS es un sistema de control de versiones distribuido 
+O SVN es un sistema de control de versiones distribuido 
+
+4.- ¿Cuáles son las fases RUP? 
+X Inicio, elaboración, construcción y transición. 
+O Ciclos, fases e iteraciones. 
+O Análisis, diseño, implementación y pruebas 
+
+5.- ¿Cuál de las siguientes afirmaciones es cierta? 
+O La Arquitectura dirigida por modelos permite, mediante los 3 puntos de vista definidos (CIM, PIM e ISM), la portabilidad, interoperabilidad y reusabilidad del software. 
+X En la Arquitectura dirigida por modelos, mediante un proceso de abstracción, se obtiene un modelo como simplificación de la realidad, que ayuda a entender y razonar sobre dicha realidad. 
+O La Arquitectura dirigida por modelos (MDA) es el término genérico que se emplea para identificar el enfoque de desarrollo del Software que, tomando a los modelos como elementos principales, permite un mayor grado de abstracción e interoperabilidad. 
+
+6.- En la documentación de una arquitectura, La Hoja de ruta de la documentación describe… 
+O …cómo se ha creado la documentación, qué fases ha pasado y que metodología se ha utilizado. 
+O …cómo se ha procesado la documentación, qué responsables ha tenido y la lista de firmas. 
+X …cómo se ha realizado la documentación, su organización y la manera de buscar información en ella. 
+
+7.- ¿Qué características son muy importantes en el concepto de Arquitectura del software? 
+O Especifica los requisitos de red necesarios para un sistema. 
+O Define las características funcionales, dejando las no funcionales para la etapa de diseño 
+X Especifica la comunicación entre los componentes. 
+
+8.- ¿Cuál de las siguientes afirmaciones es cierta? 
+O La Arquitectura del Software se basa en los requisitos funcionales de la aplicación. 
+X La Arquitectura del Software se define sobre una serie de atributos de calidad. 
+O La Arquitectura del Software define el lenguaje de programación que deberá usar el equipo de desarrollo. 
+
+9.- La vista de módulos define la manera en que se descompone el sistema, en ella, ¿Qué tipo de relaciones se  pueden establecer entre los módulos? 
+O concerns, allocated-to y migrates-to. 
+O relates-to, related-on y call-return.  
+X is-a, is-part-of y depends-on. 
+
+10.- Un problema de Pipes and Filters es… 
+O …la falta de concurrencia 
+X …la falta de interactividad 
+O …que no es eOtensible 
+
+11.- En HTTP, la operación DELETE... 
+O ...no es ni idempotente ni segura 
+O ...es idempotente y segura 
+X ...es idempotente pero no segura 
+
+12.- ADD es un método de diseño de arquitecturas que se basa en… 
+X …la identificación de atributos de calidad que son modelados mediante escenarios de calidad. 
+O …las definiciones funcionales que permiten identificar atributos y escenarios de calidad. 
+O …la identificación de escenarios de calidad a partir de los cuales se crean los atributos de calidad. 
+
+13.-En Git, el término origin suele referirse a… 
+O el directorio de trabajo local 
+O el primer commit 
+X el repositorio remoto del cual se hizo la primera clonación 
+
+14.- En el estilo MVC, el estado es representado por… 
+O ... el controlador 
+X ... el modelo 
+O ... la vista 
+
+15.- Un interfaz fluido... 
+X ...se puede obtener si los métodos que modifican un objeto devuelven dicho objeto 
+O ...es un servicio web que separa los métodos de consulta de los métodos de escritura 
+O ...se implementa mediante HATEOAS 
+
+16.-  Los COTS (Commercial Off-the-Shelf) son componentes… 
+X …obtenidos de fuentes de software libre o de proveedores. 
+O …que han sido rechazados para el sistema implementado. 
+O …que no pertenecen a la plataforma desarrollada sino a los clientes.
+
+16/16
+------------------------------------------------------------------------------------------------------------------------------------------------
+1.- En el desarrollo de software dirigido por modelos…
+O Se utilizan modelos para definir el funcionamiento y requerimientos de una aplicación software
+X Se aplican transformaciones automáticas o semiautomáticas sobre los modelos, con el objetivo de generar productos software
+O Se dota a los desarrolladores de un mayor conocimiento sobre el dominio del software que están desarrollando.
+
+2.- ¿Hay alguna diferencia entre un diagrama y una vista de arquitectura?
+X Los diagramas son o pueden ser parte de documentación de la vista.
+O No hay ninguna diferencia, ya que las vistas son siempre diagramas.
+O Los diagramas se utilizan para representar requisitos no funcionales, mientras que las vistas representan requisitos funcionales.
+
+3.- ¿Cuál de las siguientes afirmaciones es cierta?
+O La arquitectura del software se basa en los requisitos funcionales de la aplicación.
+X La arquitectura del software se define sobre una serie de atributos de calidad.
+O La arquitectura del software define el ADL que deberá usar el equipo de desarrollo.
+
+4.- ¿En qué consiste el método ADD?
+O Es un método de diseño de arquitecturas que se basa en la creación de escenarios de calidad para identificar los requisitos no funcionales.
+X Es un método de diseño de arquitecturas que se basa en la creación de escenarios de calidad que modelan los atributos de calidad identificados.
+O Es un método de diseño de arquitecturas que se basa en los requisitos funcionales para definir los atributos y escenarios de calidad.
+
+5.- ¿Que afirmación es cierta sobre UML en relación con la arquitectura del software?
+X Los estereotipos de UML permiten ampliar el lenguaje y adaptar mejor UML para definir arquitecturas de software.
+O UML es un lenguaje de definición de arquitecturas creado para la arquitectura del software.
+O Los diagramas de despliegue de UML no tienen mucho interés para la descripción de una arquitectura del software.
+
+6.- En el estilo arquitectónico de componentes...
+O ...los conectores representan las relaciones entre los componentes y el resto de elementos de la arquitectura.
+X ...los componentes representan elementos que eOistirán en tiempo de ejecución.
+O ..los componentes y los conectores representan elementos conceptuales sin correspondencia necesaria con piezas de software.
+
+7.- ¿Cómo se describe la testabilidad?
+O Es la metodología usada en el sistema para inspeccionar el código y las variables
+O Es la capacidad que tenga el equipo de desarrollo para revisar el código y encontrar fallos
+X Es la probabilidad de que un error eOistente en el software sea detectado en la siguiente ejecución de las pruebas
+
+8.- ¿Qué son los COTS (Commercial Off-the-Shelf)?
+X Son componentes de software obtenidos de fuentes de software libre o de proveedores.
+O Son componentes que no pertenecen a la plataforma desarrollada sino a los clientes.
+O Son componentes que han sido reciclados de otros sistemas implementados.
+
+9.- ¿Cómo se comunican los componentes en los estilos basados en eventos?
+O Se comunican a través de mensajes síncronos
+X Se comunican a través de mensajes asíncronos
+O Se comunican de ambos modos
+
+10.- El principio Open/Closed recomienda que…
+X Un módulo debe estar abierto para eOtender, pero cerrado para modificar
+O Un módulo debe estar abierto para modificar, pero cerrado para eOtender
+O Un módulo debe estar abierto para ver el código fuente, pero cerrado para modificar o eOtender
+
+11.- Para conseguir una interfaz fluida
+O Se utilizan métodos que no modifican el estado del objeto
+O Se utiliza programación orientada a aspectos
+X Los métodos modificadores devuelven el objeto sobre el que actúan
+
+12.- Una ventaja de la Programación Orientada a Aspectos es…
+O La depurabilidad del código
+* La reutilización de código
+X El rendimiento de la aplicación
+
+13.- En los modelos basados en actores
+O Un actor es una entidad computacional sin estado
+X Un actor es una entidad computacional con estado
+O Un actor es una entidad computacional con un estado que no puede modificarse
+
+14.- ¿Cuál de las siguientes afirmaciones es correcta?
+O MapReduce es un estilo compuesto del estilo REST
+O MapReduce se basa en el estilo MVC
+X REST se basa en el estilo Cliente-Servidor sin estado
+
+15.- El software CRM
+X Permite adaptar los productos a las necesidades de los clientes
+O Se utiliza en la gestión de almacenes
+O Es un tipo de Groupware
+
+16.- En Git
+O master suele referirse al repositorio central
+O origin suele referirse a la rama principal
+X checkout permite cambiar de una rama a otra
+
+15/16
+---------------------------------------------------------------------------------------------------------
+1.- ¿Qué incluye la arquitectura del software?
+O La Arquitectura del Software incluye las definiciones del hardware y la red sobre la que se desarrolla la aplicación
+O La Arquitectura del Software incluye detalles de implementación de bajo nivel, tales como bases de datos, ficheros, detalles de implementación, etc.
+X La arquitectura de software incluye la estructura o estructuras del sistema, que comprenden elementos de software, las propiedades eOternamente visibles de esos elementos, y las relaciones entre ellas
+
+2.- La arquitectura del software...
+X ... modela una solución a los requisitos no funcionales
+O ... modela una solución a los requisitos funcionales
+O ... modela una solución a los requisitos funcionales sin modificar los requisitos no funcionales
+
+3.- Los interesados (stakeholders) son personas, grupos de personas u organizaciones que…
+O …componen la competencia empresarial a la compañía que desarrolla el software y que tienen un interés personal en el fracaso del proyecto
+X …tienen un interés personal en la aplicación y que comparten un conjunto común de preocupaciones e intereses en la aplicación
+O …desarrollan la aplicación y tienen interés especial en la utilización de una tecnología de baja complejidad
+
+4.- En un escenario de calidad, el estímulo es:
+X Una condición que debe ser considerada cuando llega a un sistema
+O Una pieza de software que genera un evento
+O Un módulo donde tiene lugar el evento
+
+5.- ¿Qué es un ADL?
+O Es una arquitectura de descripción de lógica para software inteligente
+O Es un modelo de creación de arquitecturas basado en atributos de calidad
+X Es un lenguaje de descripción de arquitecturas
+
+6.- ¿Cuál de los siguientes es un método de evaluación de arquitecturas?
+X SAAM
+O ABC
+O UML
+
+7.- El método ADD para definir arquitecturas, sigue un proceso...
+O Bottom-up
+O Divide y vencerás
+X Top-Down
+
+8.- ¿Qué son los COTS (Commercial Off-the-Shelf)?
+O Son componentes que no pertenecen a la plataforma desarrollada sino a los clientes.
+X Son componentes de software obtenidos de fuentes de software libre o de proveedores.
+O Son componentes que ha sido rechazados para el sistema implementado.
+
+9.- ¿Qué es un “feature flag”?
+O Una rama especial de git utilizada en el repositorio remoto
+X Una característica que puede activarse o desactivarse para ciertos usuarios en tiempo de ejecución
+O Un estilo arquitectónico basado en inyección de características
+
+10.- ¿Cuál es la diferencia entre una versión y una release?
+O Una versión suele ser publicada mientras que las releases suelen ser internas al equipo de desarrollo
+X Una release suele ser publicada mientras que las versiones suelen ser internas al equipo de desarrollo
+O No eOisten diferencias entre ambos conceptos
+
+11.- En el ciclo de vida por defecto de Maven
+O EOisten varias fases como initialize - package – compile – test que se ejecutan en ese orden
+O EOisten varias fases como clean – compile – site - test – package que se ejecutan en ese orden
+X EOisten varias fases como initialize - compile – test – package que se ejecutan en ese orden
+
+12.- Software on premises se refiere a:
+O Un estilo arquitectónico basado en código asíncrono
+X Software que se instala y ejecuta en el inmueble de la persona u organización que lo va a utilizar
+O Software distribuido en la nube
+
+13.- La arquitectura lambda es un estilo arquitectónico…
+X …propuesto para procesar big data en tiempo real identificando 3 capas o layers: batch, speed, y serving
+O …propuesto para mejorar el mantenimiento del software mediante programación funcional
+O …basado en la utilización de lenguajes de dominio específico
+
+14.- En el estilo basado en actores:
+O Los actores tienen una memoria compartida
+X Los actores se comunican mediante mensajes y no comparten recursos
+O Los actores no se comunican entre sí, sino que lo hacen a través de un bus de mensajería
+
+15.- ¿En cuál de los siguientes estilos se basa Apache Kafka?
+X Publish/subscribe
+O MVC
+O PAC
+
+16.- El software que trata aspectos relacionados con los almacenes y la logística de una empresa es:
+O CRM
+X WMS
+O ERP
+
+16/16
+-------------------------------------------------------------------------------------------------------------------------
+1.- ¿Hay alguna diferencia entre un diagrama y una vista de arquitectura?
+O No hay ninguna diferencia, ya que las vistas son siempre diagramas.
+X Los diagramas son o pueden ser parte de documentación de la vista.
+O Es tal la relación entre ambos que puede usarse indistintamente una u otra acepción.
+
+2.- Según ABC, se considera la arquitectura como un paso previo al diseño y la implementación. Este paso previo consta de varios pasos. EL último de ellos es:
+X Aseguramiento de que la aplicación se ajusta a la arquitectura
+O Cierre del proyecto de arquitectura
+O Implementación del sistema basado en la arquitectura
+
+3.- ¿Cuál de las siguientes es la mejor definición de interesados (stakeholders)?
+O Son personas, grupos de personas u organizaciones que componen la competencia empresarial a la compañía que desarrolla el software y que tienen un interés personal en el fracaso del proyecto
+X Son personas, grupos de personas u organizaciones que tienen un interés personal en la aplicación y que comparten un conjunto común de preocupaciones e intereses en la aplicación
+O Son personas, grupos de personas u organizaciones que desarrollan la aplicación y que tienen interés especial en la utilización de una tecnología de baja complejidad
+
+4.- En (Gorton, 2006) se describe un modelo simple de tres pasos para el estudio de arquitecturas, ¿cuáles?
+O Elegir un módulo a descomponer, Refinar el módulo y repetir estos pasos hasta que no se necesario una descomposición más profunda.
+O Inicio, desarrollo y transición
+X Definir los requisitos de arquitectura, realizar el diseño de la arquitectura y validar la arquitectura
+
+5.- En el estilo arquitectónico de componentes...
+O …los conectores representan relaciones entre las clases que no necesitan implementación.
+O ...los componentes representan elementos de diseño.
+X ...los componentes y los conectores representan elementos que eOistirán en tiempo de ejecución y los caminos de interacción.
+
+6.- ¿Qué es Attribute Driven Design (ADD)?
+O ADD es un método de diseño de arquitectura que basa la descomposición de procesos en la creación de historias de usuario
+X ADD es un método de diseño de arquitectura que basa la descomposición de procesos en los atributos de calidad que el software ha de cumplir
+O ADD es un método de diseño de arquitectura que basa la descomposición de procesos en la identificación de las funcionalidades del sistema
+
+7.- ¿Qué son los COTS (Commercial Off-the-Shelf)?
+O Son componentes que no pertenecen a la plataforma desarrollada sino a los clientes.
+O Son componentes que han sido reciclados de otros sistemas implementados.
+X Son componentes de software obtenidos de fuentes de software libre o de proveedores.
+
+8.- Las vistas basadas en la relación "Is-part-of" son:
+X Las vistas de descomposición
+O Las vistas de secuencia
+O Las vistas de conectores y componentes
+
+9.- ¿Cuál de los siguientes tipos de software suele utilizarse para la gestión de un Call-Center?
+O WMS
+X CRM
+O BPM
+
+10.- ¿Cuál de las siguientes suele ser una restricción de la arquitectura Kappa?
+O EOiste un protocolo de red en el que se transfiere un programa de un computador a otro
+X El log de eventos es append-only
+O En cada agente, no hay comunicación directa entre la parte de abstracción y de presentación
+
+11.- ¿Cuál de las siguientes tecnologías se basa en el modelo de actores?
+X Akka
+O Angular
+O Ionic
+
+12.- ¿Cuál de los siguientes atributos de calidad puede mejorarse mediante el estilo Layers?
+O Rendimiento
+O Desplegabilidad
+X Testabilidad
+
+13.- Una línea de producto es:
+O Una capa de la arquitectura Kappa
+X Un conjunto de productos que comparten una serie de funcionalidades para un segmento de mercado
+O Un componente de la vista de despliegue
+
+14.- Un método de alcanzar el despliegue automático es:
+O Separar la capa de presentación de la capa de control
+O Utilizar una arquitectura basada en microservicios
+X Mantener todos los ficheros de configuración, datos y código bajo control de versiones
+
+15.- El estilo Serverless se basa en:
+O Desarrollar solamente el front-end de las aplicaciones
+X Crear aplicaciones que dependen de servicios de terceras partes con escalabilidad automática
+O Crear modelos de actores que se ejecutan en los clientes
+
+16.- En Event Sourcing:
+X Los cambios del estado de la aplicación se almacenan como secuencias de eventos
+O EOiste una fuente que genera los eventos que serán procesados asíncronamente
+O Se utilizan dos capas: la capa Batch y la capa Streaming
+
+16/16
+----------------------------------------------------------------------------------------------------------
+1.- La arquitectura serverless
+O Propone aplicaciones descentralizadas en las que no eOista un servidor único
+O Consiste en que los desarrolladores gestionan la escalabilidad de las aplicaciones
+X Se conoce también como function-as-a-service
+
+2.- La especificación ISO25010:
+O ...define una lista de restricciones que toda arquitectura del software debe satisfacer
+X ...define un modelo de calidad que incluye una lista de atributos de calidad
+O ...define la lista de requisitos funcionales del sistema
+
+3.- Un escenario de calidad debe especificar:
+O Las restricciones del software
+X Una medida de la respuesta
+O El patrón arquitectónico que se va a utilizar
+
+4.- La deuda técnica…
+O …es una restricción impuesta por los stakeholders
+O …consiste en utilizar arquitecturas de referencia
+X …es el efecto de tomar una decisión de diseño equivocada
+
+5.- Un profiler
+O Es un sistema de control de versiones con integración continua
+X Es una herramienta que informa sobre el uso de recursos durante la ejecución de un software
+O Es una herramienta utilizada para BDD
+
+6.- Utilizar canary releases consiste en:
+O Desarrollar versiones de software en ramas que puedan ser borradas posteriormente
+X Introducir nuevas versiones mostrando cambios lentamente a un subconjunto de los usuarios
+O Utilizar integración continua para producir versiones de forma continua con pruebas de aceptación
+
+7.- La ley de Conway dice que…
+O ..."es necesario definir módulos que sean liberales en lo que aceptan de otros y conservadores en lo que envían"
+X ..."las organizaciones que diseñan sistemas acaban produciendo sistemas que son copias de las estructuras de comunicación de dichas organizaciones"
+O ..."los subtipos deben seguir el contrato de los supertipos"
+
+8.- ¿Cuál de los siguientes sistemas tiene un estilo arquitectónico peer-to-peer?
+O Asciidoctor
+O Mocha
+X IPFS
+
+9.- Una ventaja del estilo arquitectónico Batch es:
+X Acoplamiento débil entre componentes
+O Interactividad
+O Concurrencia
+
+10.-¿Cuál de las siguientes frases es correcta?:
+X Todos los atributos de calidad son buenos.
+O Los atributos de calidad tienen un valor booleano, o se cumplen o no.
+O Los atributos de calidad son independientes entre sí.
+
+11.- La ingeniería del caos…
+O …es un antipatrón de arquitectura del software que puede surgir al no utilizar control de versiones
+X …propone inyectar fallos adrede en sistemas distribuidos para comprobar la resiliencia
+O …consiste en realizar pruebas de carga hasta que el sistema no tenga más capacidad
+
+12.-Un WMS:
+O Es un sistema de balanceo de carga en aplicaciones Web
+O Es un sistema de gestión del conocimiento de una empresa
+X Es un tipo de software que permite gestionar almacenes
+
+13.- Gherkin
+X Es un lenguaje utilizado para definir historias de usuario
+O Es un sistema de integración continua
+O Es una herramienta para realizar pruebas de navegación en aplicaciones Web
+
+14.- En Arc42, una vista estática del sistema formada por una jerarquía de cajas blancas y negras es la…
+O Vista en tiempo de ejecución ó runtime view
+X Vista de bloques de construcción ó building block view
+O Vista de despliegue ó deployment view
+
+15.- Un escenario de calidad…
+O …es una restricción del sistema planteada por uno de los stakeholders
+O …es también conocido como deuda técnica o technical debt
+X …describe qué debería ocurrir cuando llega un estímulo
+
+16.- ATAM
+X Es un método de evaluación de arquitecturas del software
+O Es un patrón arquitectónico
+O Es una metodología de desarrollo de software ágil
+
+16/16
+----------------------------------------------------------------------------------------
+1.- CQRS separa el interfaz en
+O peticiones y respuestas
+X comandos que realizan acciones y consultas que leen datos
+O comandos que realizan acciones y consultas que escriben datos
+
+2.- MTBF y MTTR
+X Son tiempo medio entre fallos y tiempo medio de recuperación
+O Son dos técnicas utilizadas para identificar stakeholders
+O Se utilizan para medir la complejidad ciclomática
+
+3.- El conacimiento entre 2 elementos puede hacer que
+O un cambio en uno obliga a crear el otro para que el sistema sea correcto
+X un cambio en uno obliga a un cambio en otro para mantener sistema correcto
+O sea necesario crear ambos al mismo tiempo
+
+4.- En Event-driven architecture
+O Los consumidores de eventos esperan que los productores envíen eventos
+O Los eventos son invocaciones síncronas
+X Un evento es algo que ha sucedido
+
+5.- La arquitectura Kappa utiliza
+X un log distribuido y replicado como almacenamiento de eventos
+O una capa batch para almacenar los logs distribuidos
+O un log de eventos que pueden modificarse durante la ejecución
+
+6.- En las compañías basadas en producto en dominios diferentes del software
+O El software es lo más importante de la empresa
+O La inversión suele ser realizada por business angels o capital riesgo
+X Se produce un compromiso entre departamento IT interno o outsourcing
+
+7.- La Vista de bloques de construcción de Arc42
+O Se basa en diagramas de despliegue de UML
+O Contiene un único diagrama que combina cajas blancas y negras
+X Puede contener varios diagramas de cajas blancas y cajas negras combinados
+
+8.- El modelo de capas de docker
+X Permite definir imágenes a partir de otras imágenes
+O Permite que los contenedores estén aislados
+O Permite crear un dockerd a partir de una imagen
+
+9.- ¿Quién dijo que los pilares de una buena arquitectura eran Utilidad, durabilidad y elegancia?
+O Martin Fowler en el s. OO
+X Vitruvio en 15 al 30 a. de C.
+O Aristóteles en 300 a. de C.
+
+10.- Una solución basada en "steady state" o estado estacionario es
+O Crear una réplica del servidor
+O Utilizar un monitor que limite las peticiones que ocupan mucho tiempo
+X Limpiar recursos del sistema automáticamente
+
+11.- Las líneas de producto software requieren
+O técnicas de análisis del comportamiento del código
+X identificar soluciones genéricas a problemas comunes de varios productos
+O crear sistemas que evolucionan con el tiempo
+
+12.- Se recomienda que los registros de decisiones arquitectónicas sean
+O Revisados y actualizados continuamente
+O Actualizados en cada etapa del desarrollo
+X Inmutables
+
+13.- En las arquitecturas de microservicios, cuando hay varios nodos computacionales, la escalabilidad se obtiene
+O replicando todos los microservicios en cada nodo
+X replicando cada microservicio de forma independiente en diferentes nodos
+O utilizando la ley de Conway
+
+14.- La Ley de Lehman de Crecimiento Continuo establece que
+O El número de usuarios de un sistema software aumenta con el tiempo
+X La funcionalidad de un sistema aumenta para satisfacer a los usuarios
+O El número de desarrolladores de un sistema software aumenta con el tiempo
+
+15.- En REST, la operación PUT
+O No es ni idempotente ni segura
+X Es idempotente pero no segura
+O Es idempotente y segura
+
+16.- Los mapas de Wardley representan
+O en un eje la capacidad computacional y en otro la época
+X en un eje el valor para el usuario y en otro la evolución
+O tipos de arquitecturas basadas en serverless
+
+17.- La diferencia entre "npm install paquete" y "npm install -g paquete"
+O El segundo instala dependencias en carpeta node_modules
+X El primero instala dependencias en carpeta node_modules
+O El primero instala paquetes en node y el segundo en docker
+
+18.- En los escenarios de calidad
+O se identifican stakeholders
+O se crean diagramas de cajas blancas/negras relacionando componentes con nodos computacionales
+X se definen estímulos, respuestas y medidas esperadas de dichas respuestas
+
+19.- Según la ley de Conway, las organizaciones que diseñan sistemas...
+O producen diseños que copian el resto de organizaciones
+X producen diseños que son copias de las estructuras de estas organizaciones
+O producen diseños basados en 3 capas
+
+20.- Una restricción en Domain Driven Design es
+X Que los Objetos valor sean inmutables
+O Que los aspectos capturen crosscutting concerns
+O Que el modelo de dominio sea independiente del sistema de persistencia
+
+20/20
+-----------------------------------------------------------------------------------------------
+1.- ISO 25010…
+O Es un estándar utilizado para definir diagramas de arquitectura
+X Clasifica varios atributos de calidad en 2 clases: calidad de producto y calidad en uso
+O Es un estándar para definir diagramas MindMap con atributos de calidad
+
+2.- Una herramienta que permite conocer el consumo de recursos durante la ejecución de un programa es un
+X Profiler
+O Depurador
+O Analizador estático
+
+3.- El software que se utiliza para la automatización y gestión de almacenes se engloba en:
+O PLM
+O SCM
+X WMS
+
+4.- ¿Cuál de las siguientes es una de las 8 falacias de la computación distribuida?
+X La topología no cambia
+O La red es heterogénea
+O La latencia es negativa
+
+5.- La disponibilidad
+O Es un ejemplo de métrica estructural
+X Puede calcularse a partir de MTTR y MTBF
+O Suele ser uno de los principales requisitos funcionales
+
+6.- Cuando en varios componentes, el orden de ejecución de una serie de instrucciones debe ser el mismo
+O Se produce un co-nacimiento estático de ejecución
+X Se produce un co-nacimiento dinámico de ejecución
+O Se cumple el principio de robustez de Postel
+
+7.- Asociar bloques de construcción a una infraestructura se realiza en:
+O Diagrama de despliegue
+X Diagrama de conteOto
+O Diagrama de tiempo de ejecución
+
+8.- ADD
+X Es una metodología para la creación de arquitecturas del software basada en atributos de calidad
+O Es una metodología para el desarrollo de software basado en pruebas de aceptación
+O Es una métrica utilizada para determinar los atributos de calidad
+
+9.- En el estilo heOagonal, el núcleo está formado por
+O Infraestructuras y frameworks
+X Un modelo de dominio independiente
+O Base de datos
+
+10.- CCD
+O Se utiliza para realizar diagramas de componentes con ciclos
+* Es una métrica para analizar las dependencias entre componentes
+X Es una técnica para desarrollar arquitecturas de software basadas en pruebas de aceptación
+
+11.- El patrón governor promueve
+O Utilizar un nodo master que gestione los recursos de los nodos slave
+X Ralentizar la velocidad de algunas acciones automáticas
+O Controlar la velocidad de los productores para evitar backpressure
+
+12.- ¿Cuál de los siguientes estilos arquitectónicos se ve afectado por el problema de backpressure?
+X Pipes and filters
+O Master-slave
+O PAC
+
+13.- El modelo de actores
+O Se utiliza para sistemas interactivos
+X Ofrece una solución para sistemas con paralelismo
+O Es una variación de los sistemas basados en intérpretes
+
+14.- Si no se cumple el Common Reuse Principle
+X Pueden aparecer muchas releases innecesarias
+O Puede surgir código difícil de reutilizar
+O Pueden surgir demasiados componentes a cambiar
+
+15.- En el modelo C4
+X Se definen 4 niveles: ConteOto, Contenedores, Componentes y Código
+O Se utilizan 4 atributos de calidad principales
+O Se establecen una serie de escenarios de calidad que se validan mediante las 4 métricas clave de DORA
+
+16.- Una gestión de los objetivos a nivel de servicio
+O Permite garantizar la creación de servicios perfectos y sin errores
+X Permite disponer de un error budget
+O Se utiliza para establecer acuerdos legales con los consumidores de un servicio
+
+17.- ¿Cuál de las siguientes situaciones requiere modificar el proOy para que utiliza localhost?
+X Cuando se realizan las pruebas de carga con el comando Gatling
+O Cuando se realiza la monitorización del sistema mediante Prometheus
+* Cuando se realiza la grabación de las acciones en el Gatling recorder
+
+18.- Según Mark Richards y Neal Ford, la segunda ley de la Arquitectura del Software es:
+O Todas las decisiones significativas deben ser registradas
+X El porqué es más importante que el cómo
+O La arquitectura del software debe resolver los requisitos no funcionales
+
+19.- ¿Cuál de las siguientes es una de las cuatro medidas clave de DORA?
+O Complejidad ciclomática
+O Frecuencia de fallos
+X Tiempo de espera para cambios (Lead time to change)
+
+20.- Idealmente, en el estilo basado en microservicios
+X Se utiliza una base de datos independiente para cada microservicio
+O Cada microservicio accede a una base de datos central a través de un API común
+O Se utiliza un orquestador para desplegar todos los microservicios
+
+18/20
+------------------------------------------------------------------------------------------------
+1.-Backpressure se produce:
+X Cuando un productor genera datos a una velocidad mayor de la que el consumidor puede procesar
+O En el momento en que un actor no puede responder mensajes de otros actores
+O En organizaciones que no aplican la maniobra inversa de Conway
+
+2.- Un flaky test es
+O Un test que siempre falla
+X Un test que unas veces pasa y otras no sin haber cambiado el código
+O Un test que no termina
+
+3.- La gestión de configuraciones software...
+X ...incluye el tratamiento de las diferentes versiones del software
+O ... define la arquitectura del sistema mediante una descripción de los stakeholders
+O ...se utiliza para identificar las principales capas del sistema
+
+4.- Las pruebas de estrés
+O Se utilizan para optimizar los sistemas de integración continua
+O Son un tipo de pruebas de usabilidad con grupos de usuarios sometidos a condiciones complejas
+X Son pruebas de carga que llevan al sistema al límite
+
+5.- En los sistemas de análisis de comportamiento de código, un hotspot
+O Es un componente que depende de muchos componentes
+X Es un componente de gran complejidad que a la vez tiene una frecuencia de cambio elevada
+O Es un componente del cual dependen muchos componentes
+
+6.- El software que realiza un seguimiento de los clientes y gestiona su satisfacción se conoce como
+X CRM
+O ECM
+O PLM
+
+7.- La maniobra inversa de Conway recomienda
+O Utilizar APIs REST basadas en eventos
+X Evolucionar los equipos para promover la arquitectura deseada
+O Crear equipos especializados en función de los conocimientos técnicos de sus componentes
+
+8.- La Segunda Ley de Arquitectura del Software según Mark Richards es:
+X El porqué es más importante que el cómo
+O Todo en arquitectura del software es una solución de compromiso
+O Antes de desarrollar software es necesario identificar los stakeholders y los atributos de calidad
+
+9.- La inestabilidad de un módulo se calcula a partir de:
+X Fan-in y Fan-out
+O Complejidad ciclomática
+O LCOM
+
+10.- El estilo arquitectónico que favorece el uso de código Javascript en páginas web se conoce como:
+X Código bajo demanda
+O Agentes móviles
+O Arquitectura basada en eventos
+
+11.- En el patrón CQRS
+O Se utilizan eventos para mantener el estado del sistema
+O Se utilizan operaciones asíncronas
+X Se separan las operaciones de modificación de las operaciones de consulta
+
+12.- En el patrón de microservicios conocido como sidecar se promueve:
+O Utilizar una base de datos independiente para cada microservicio
+X Agrupar en un contenedor tareas periféricas como logging, configuración, etc.
+O El uso de APIs REST basadas en eventos
+
+13.- Software on premises se refiere a:
+X Software que se instala y ejecuta en las instalaciones de la persona u organización que lo va a utilizar
+O Un estilo arquitectónico basado en código asíncrono
+O Software distribuido en la nube
+
+14.- En Domain Driven Design, los objetos valor
+X pueden contener atributos, pero son inmutables
+O tienen una identidad que permite que sean modificables
+O se utilizan para crear otros objetos
+
+15 (2 puntos).- Indicar 3 ventajas y 3 retos o desventajas del estilo arquitectónico Serverless
+Ventajas
+Escalabilidad
+Costearse solo los servicios que se usan
+Disponibilidad
+
+Desventajas/Retos
+Monitorización
+Seguridad
+Dependencia de una empresa ajena
+
+14/14 2/2
+-------------------------------------------------------------------------------------------------------------------
+1.-El efecto Dunning-Kruger se produce cuando…:
+O …la gente sabe que está siendo observada y cambia su comportamiento para hacer lo adecuado
+X …gente con poco conocimiento sobreestima su capacidad
+O …un tamaño grande de un equipo impacta la comunicación
+
+2.- ¿Cuál de las siguientes frases es correcta?
+X Las tácticas dependen del atributo de calidad
+O Los atributos de calidad están asociados a los requisitos funcionales
+O Los estilos arquitectónicos están asociados a un determinado problema
+
+3.- Un aspecto fundamental de la propuesta Domain Driven Design es:
+O La creación de puertos y adaptadores que aíslan la aplicación del framework
+O La generación automática de código
+X La definición de un lenguaje ubicuo
+
+4.- En la conferencia realizada por la empresa DOC se menciona que:
+O La empresa ha adoptado una solución basada en computación en la nube sobre Azure
+X Uno de los principios fundamentales de la plataforma Assure es la automatización completa
+O La empresa ha adoptado una arquitectura lambda para afrontar el procesamiento de Big Data
+
+5.- ¿Cuál de las siguientes es una ley de Lehman?
+O Las personas con menor conocimiento sobreestiman sus posibilidades
+X Un sistema debe ser continuamente adaptado o cada vez se hace menos satisfactorio
+O Los sistemas grandes eOisten en un estado de fallo parcial continuo
+
+6.- Los mapas de Wardley:
+X Se utilizan para analizar estrategias para la modernización de la arquitectura
+O Permiten identificar las dependencias de software cíclicas
+O Se utilizan para identificar Stakeholders y sus relaciones
+
+7.- En un sistema de evaluación remota
+O Se utiliza la sintaOis del lenguaje anfitrión
+X Puede haber problemas de seguridad porque un sistema envía código a otro para que lo ejecute
+O El sistema puede modificar el meta-nivel mediante el protocolo meta-objetos
+
+8.- En MapReduce
+O Los reducers toman una lista de claves y valores y devuelven una lista de claves y valores
+O El log de eventos permite procesar contenido en tiempo real
+X El sistema se encarga de ordenar y mezclar la salida de los mappers que luego se envía a los reducers
+
+9.- En las pruebas de mutación:
+O Se realizan cambios en código de pruebas para detectar si el código fuente sigue funcionando
+X Se realizan cambios en código fuente para detectar si las pruebas detectan errores tras dichos cambios
+O Se introducen microservicios mutantes que introducen errores deliberadamente
+
+10.- Una práctica recomendada en la plantilla de repositorio github usada en la asignatura para el despliegue es:
+X Publicar imágenes de contenedores docker en GHCR mediante Github Actions
+O Utilizar Github actions para realizar pruebas de carga y usabilidad
+O Crear pruebas de carga que se describen mediante el fichero sonar-project.properties
+
+11.- La métrica Lead time to change consiste en medir tiempo que se tarda…:
+O …en restaurar un sistema tras un cambio en la configuración del sistema
+O …en cambiar la topología de un equipo de desarrollo de software
+X …desde que se hace un commit de cambio en código hasta que entra en producción
+
+12.- En el análisis de conacimiento
+X Es mejor que el conacimiento se produzca entre componentes con poca distancia entre ellos
+O El conacimiento de nombre es dinámico
+O Es importante evitar dependencias cíclicas entre componentes
+
+13.- Los sistemas basados en reglas
+O Son una variante del patrón MVC
+O Se utilizan en la maniobra inversa de Conway para definir las reglas que debe aceptar cada equipo
+X Promueven la utilización de una base de conocimiento con conocimiento declarativo
+
+14.- La deuda técnica:
+X Suele ser una mala decisión que se toma conscientemente
+O Es un aliado del arquitecto del software puesto que son decisiones que no pueden modificarse
+O Ocurre cuando la arquitectura diseñada es diferente de la arquitectura del sistema desarrollado
+
+15 (2 puntos).- Indicar 3 ventajas y 3 retos o desventajas del Patrón Event Sourcing
+Ventajas
+Conocemos el proceso en el que los eventos han ocurrido para llegar a ese estado
+reusabilidad
+Mantenibilidad
+Trazabilidad
+
+Desventajas
+La consistencia de los datos
+Complejidad
+Necesidad de herramientas específicas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

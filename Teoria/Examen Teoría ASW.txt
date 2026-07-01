@@ -1,0 +1,655 @@
+Examen Teoría ASW:
+Tema 1: Definiciones
+- ¿Qué es la arquitectura?
+- ¿Qué diferencia hay entre arquitectura y diseño?
+- OPCIONAL: ¿Cuál es la mentalidad de un buen arquitecto de software?
+- OPCIONAL: Similitudes y diferencias de arquitecturas de diseño vs de edificios
+- Beneficios A.S
+- Retos A.S
+- ¿Qué ventajas tiene una A.S ágil?
+- Leyes de la A.S -> Seguramente caigan en el examen
+//////////////////////////////////////////////////////////////////////////////////////
+1era ley: Todo en arquitectura tiene una decisión con sus inconvenientes y ventajas, un arquitecto debe de tener ambas en cuenta y tomar una decisión en consecuencia.
+Si crees que no hay solución de compromiso, es decir, solo hay una única forma de hacer algo, es que no lo estás viendo bien.
+2nda ley: Es más importante porque utilizas las cosas que el como las vas a utilizar.
+//////////////////////////////////////////////////////////////////////////////////////
+- Proceso de la arquitectura
+--- ¿Para qué se usan objetivos de diseño en un sistema?
+--- ¿Qué son los requisitos funcionales?
+--- ¿Qué son los atributos de calidad?
+--- ¿Qué son las restricciones?
+--- ¿Qué son las preocupaciones?
+//////////////////////////////////////////////////////////////////////////////////////
+Motivaciones de la arquitectura:
+- Objetivos de diseño. Aclarar porque se diseña en ese sistema.
+- Requisitos funcionales. Funcionalidad, que hace.
+- Atributos de calidad o requisitos no funcionales. Características medibles que interesan a usuarios o desarrolladores. Determinan la mayoría de decisiones de diseño de arquitectura.
+El motor Rust, funciona mucho más rápido que otros sistemas en ejecución
+- Restricciones: (IMPORTANTE) Una restricción es algo que viene impuesto. Que programemos en RUST es una restricción. Es una decisión de la que no hay que hacerse responsables.
+- Preocupaciones: Decisiones que se toman que no están descritas explícitamente en objetivos o requisitos. P.e: Validar que el nombre en un registro cumpla ciertos criterios, como puede ser que no tenga nombre vacío o espacios en blanco.
+//////////////////////////////////////////////////////////////////////////////////////
+- Creatividad vs método
+- Sistemas greenfield y sistemas brownfield
+//////////////////////////////////////////////////////////////////////////////////////
+Sistemas Greenfield: proyecto nuevo desde cero.
+Sistemas Brownfield: modificación/evolución de un sistema existente.
+//////////////////////////////////////////////////////////////////////////////////////
+-------------------------------------------------------------------------------------
+Tema 1.2: Comunicando la A.S
+- ¿Cuál es el objetivo de la documentación?
+- ¿Qué requisitos tiene que cumplir una documentación?
+- ¿Qué son los bocetos en diseño? ¿Y qué herramientas existen? ¿Qué es la ingeniería inversa?
+//////////////////////////////////////////////////////////////////////////////////////
+Bocetos: Es un diseño básico e inicial de un diagrama o ideas principales del proyecto
+A partir de ese boceto, se "pasa a limpio", utilizando herramientas de dibujo de diagramas
+Recomendado: draw.io o PowerPoint o ByteByteGo o PlantUML
+
+Existen herramientas de ingeniería inversa. Se utilizan para pasar de código a generar diagramas (el proceso inverso). Un problema que tiene, es que puede coger demasiados detalles, y coge información que no es muy importante y abruma ya que recoge demasiada información
+
+ADLs: En vez de diagramas, genera descripciones textuales. Poco usados 
+/////////////////////////////////////////////////////////////////////////////////////
+- ¿Las plantillas Arc42 se dividen en 3 grupos, cuales?
+- TODOS LOS PUNTOS DE LAS PLANTILLAS ARC42 NS SI ESTUDIARLOS
+- ¿A qué nos referimos cuando decimos que hay que dejar pistas sobre el código?
+----------------------------------------------------------------------------------------
+Tema 2: Rol de A.S y stakeholders
+- ¿Qué decisiones arquitectónicas toma un arquitecto?
+- ¿Qué debe hacer continuamente en la arquitectura?
+- ¿Cómo se aseguran del cumplimiento de las decisiones?
+- ¿Por qué debemos de estar al día de las tendencias?
+- ¿Qué experiencia debe de tener un arquitecto?
+- ¿Cuánto conocimiento del dominio de negocio tiene que tener un arquitecto?
+- ¿Precisa de habilidades interpersonales?
+- Patrones para la organización en equipo
+--- Ocultarse y mito del genio
+--- Factor bus
+--- 3 pilares de la interacción social
+- ¿Cuál es el efecto Dunning-Kruger?
+- ¿Qué es la ley de Conway?
+- ¿Qué decía la Ley de Brook sobre la pérdida por proceso?
+- ¿Qué es la ignorancia colectiva?
+- ¿Qué son los stakeholders? ¿Qué objetivos/preocupaciones tienen?
+---------------------------------------------------------------------------------------
+Tema 2.2: Atributos de calidad
+- ¿Qué son los atributos de calidad?
+- ¿Qué 3 tipos de requisitos hay?
+--- Requisitos funcionales
+--- Requisitos de A.C o no funcionales
+--- Restricciones
+- ¿Qué gran diferencia hay entre los requisitos funcionales y los atributos de calidad?
+- ¿A qué llamamos calidad?
+- ¿Cuáles son los componentes de los escenarios de calidad?
+--- Fuente
+--- Estímulo
+--- Artefacto
+--- Respuesta
+--- Medida de respuesta
+--- Entorno
+- ¿Qué 3 tipos de escenarios hay?
+--- Escenarios de uso
+--- Escenarios de cambio
+--- Escenarios de fallo
+- ¿Cómo priorizamos un escenario, es decir, en qué nos basamos?
+- ¿Qué permite un árbol de atributos de calidad o Mindmap?
+- ¿Qué son las métricas de software? ¿Qué medidas hay? 
+--- Medidas operacionales
+--- Medidas estructurales
+--- Medidas de procesos
+- ¿Qué son las métricas DORA o 4 métricas clave?
+--- Tasa de fallos tras cambios: Cuantos cambios realizadas acaban siendo un fallo/error.
+--- Lead time to change: Caunto tardan en entrar en producción esos cambios
+--- Frecuencia de despliegue: Estas haciendo despliegue cada poco o cada mucho tiempo
+--- Tiempo medio de restauración: Si algo se cae, cuanto tiempo tardas en recuperarlo
+----------------------------------------------------------------------------------------
+Tema 2.3: Alcanzando la A.S
+- ¿Cuál es el punto óptimo en el tiempo total de un proyecto?
+- ¿Qué define un ADD: Attribute-driven design?
+- ¿Qué son las decisiones arquitectónicas y qué anti-patrón claro hay?
+- ¿Qué se debe hacer al tomar una decisión arquitectónica y por qué?
+---------------------------
+Indicencias arquitectónicas
+---------------------------
+- ¿Qué es el riesgo? ¿Y qué hacer con ellos? ¿En qué se valoran los riesgos?
+- ¿Qué es un desconocido en una arquitectura?
+- ¿Qué es un problema y qué hacer con ellos?
+- ¿Qué es una deuda técnica?
+- ¿Cuándo ocurren diferencias de comprensión?
+- ¿Cuándo ocurre un deterioro arquitectónico?
+- ¿Cuándo ocurre una evolución del contexto?
+- ¿Qué herramienta de evaluación de arquitecturas conoces?
+------------------------------------------------------------------------------------------
+Conferencia Nº1: 
+1- Tener que desarrollar un espiritu/capacidad critica para separar lo que es señal a lo que es ruido
+Ruido: Mentiras o intereses comerciales, P.e: te quedaras sin trabajo por culpa de la IA
+Señal: Herramienta con la que cambiar la forma de trabajo
+2- Trabajar con IA te da más oportunidades de empleo.
+-----------------------------------------------------------------------------------------
+Tema 3: Técnicas de la A.S
+- ¿Qué son las tácticas?
+- ¿Qué define un estilo arquitectónico y qué contienen?
+--- Elementos
+--- Relaciones
+--- Restricciones
+--- Lista de atributos
+- ¿Existen estilos puros?
+- ¿Qué es un patrón arquitectónico?
+- ¿Cuáles son las diferencias entre un patrón y un estilo?
+- ¿Qué diferencia hay entre un catálogo y un lenguaje de patrones?
+- ¿Qué es mejor construir o reutilizar?
+- ¿Qué pilas tecnológicas o familias existen y para qué sirven?
+-----------------------------------------------------------------------------------------
+Tema 4.1. Taxonomías del software. Patrones, estilos y tácticas
+- ¿Qué diferencia una SaaP de una SaaS?
+- ¿Qué es el incremental piecemeal?
+- ¿Qué anti-patrón es el Big Design Up Front?
+- ¿Qué son los métodos ágiles y para qué sirven?
+--- 1. Planificaciones cortas
+--- 2. Uso de pruebas
+----- ¿Qué tipos de pruebas existen?
+----- ¿Qué son las pruebas BDD?
+----- ¿Qué son los principios FIRST en las pruebas?
+--- 3. ¿En qué método de trabajo se basa la programación en parejas?
+--- 4. Diseño simple y documentación automatizada
+--- 5. ¿Qué es la refactorización?
+--- 6. ¿A qué nos referimos al hablar sobre la propiedad colectiva del código?
+----- ¿De qué nos sirve tener al cliente en el lugar de desarrollo?
+----- ¿Por qué es útil la entrega continua o pequeñas releases?
+--- 7. ¿Qué pasa con los programadores que sobretrabajan o están demasiadas horas?
+--- 8. ¿Qué ventaja tiene que dejemos el código limpio?
+--- 9. ¿Qué dos métodos ágiles conoces?
+---------------------------
+Gestión de configuraciones
+---------------------------
+- ¿Qué es la gestión de configuraciones?
+- ¿Y qué es el control de versiones?
+- ¿Qué es el Baseline?
+- ¿Qué diferencia una versión de un release?
+- ¿Qué es DevOps y que afronta el equipo con este cambio?
+-----------------------------
+Herramientas de construcción
+-----------------------------
+- (Hay muchas herramientas y nose bien que información es importante)
+---------------------------------
+Sistemas de control de versiones
+---------------------------------
+- En un control de versiones tenemos diferentes elementos:
+--- Almacén
+--- Baseline
+--- Delta 
+--- Trunk
+--- Branch (Rama)
+--- Tag
+--- Check-out
+--- Commit
+--- Merge
+--- Estilos de ramificación
+- ¿Qué dos tipos de control de versiones existen y en que se diferencian?
+--- Centralizados
+--- Distribuidos ¿Cómo cual?
+- ¿Qué patrones de ramificación existen?
+--- Git-flow
+--- Github-flow
+--- Trunk-based development
+---------------------------
+Gestión de dependencias
+---------------------------
+- ¿Qué es una librería?
+- ¿Qué queremos evitar en un grafo de dependencias?
+- ¿Qué 3 modelos hay para la gestión de dependencias?
+--- Instalación local
+--- Incluir solamente en proyecto
+--- Enlace externo
+- ¿Qué A.C/ventajas tiene la automatización de la construcción?
+--- Corrección
+--- Simplicidad
+--- Automatización y facilidad de publicación
+--- Coste
+- ¿Cuándo se debe de construir?
+--- Bajo demanda
+--- Planificada
+--- Triggered
+----------------------
+	Maven
+----------------------
+- ¿Qué tipo de herramienta es Maven?
+- ¿Quién se encarga de definir la configuración? ¿Y qué estructura tiene?
+- Maven tiene 3 ciclos de vida y cada ciclo tiene sus fases, ¿Qué 3 ciclos tiene?
+----------------------
+	 npm
+----------------------
+- ¿Qué es npm?
+---------------------------------------------------------------------------------------
+Tema 5.2: Modularidad
+- ¿En qué se basa la modularidad?
+- ¿Qué es Big Ball of Mud, que características tiene y que desventajas conlleva?
+- ¿Qué es un módulo, una interfaz y un cuerpo?
+- ¿Qué restricciones tienen los módulos?
+- ¿Ventajas de los módulos?
+- Recomendaciones de la modularidad
+--- Principios SOLID
+----- SRP
+----- OCP
+----- LSP
+----- ISP
+----- DIP
+- ¿Qué es la cohesividad y qué es LCOM?
+- Principios de cohesividad
+--- REP - Reuse / Release Equivalence Principle
+--- CCP: Common Closure Principle
+--- CRP: Common Reuse Principle
+- ¿Qué es el acoplamiento?
+--- ADP - Acyclic dependencies principle
+--- SDP - Stable dependencies principle
+----- ¿Cómo se mide la estabilidad?
+--- SAP - Stable abstractions principle
+- Conacimiento
+--- ¿Qué es el conacimiento? 
+--- ¿Qué 3 tipos tiene?
+----- Grado
+----- Localización
+----- Fuerza
+--- ¿Qué dos tipos hay?
+--- ¿En qué se basa la reducción de conocimiento?
+- Estilos de modularidad
+--- Capas
+----- ¿Qué son las capas y que muestran?
+----- ¿Qué elementos tiene?
+----- ¿Qué restricciones existen en las capas?
+----- ¿Qué es lo que diferencia una capa de un módulo?
+----- ¿Qué diferencia una capa de un tier?
+----- ¿Ventajas de las capas?
+----- ¿Desventajas?
+----- Variantes de las capas
+------- MV
+--------- ¿Qué añade la MV y como puede accederse?
+--------- ¿Qué ventajas y problemas tiene?
+------- 3-capas (N-capas)
+--------- ¿En que 3 capas se dividen?
+--- Aspectos
+----- ¿Qué son los aspectos y qué capturan?
+----- ¿Qué es un join point?
+----- ¿De qué esta formado un aspecto?
+------- Advice
+------- Pointcut
+----- ¿Qué restricciones tiene?
+----- ¿Ventajas y desventajas?
+--- Basados en dominio
+----- ¿Qué diferencia el particionado técnico del de dominio?
+----- ¿Qué diferencia el modelo de datos vs el de dominio?
+----- ¿En qué se centra los estilos basados en dominio
+----- ¿Qué restricciones tiene?
+----- ¿Qué ventajas y desventajas tienen?
+----- Variantes
+------- DDD - Domain Driven Design
+--------- ¿Cuál es su objetivo?
+--------- ¿Qué restricciones tiene?
+--------- ¿Qué ventajas y desventajas tiene?
+------- Estilo hexagonal
+--------- ¿Qué elementos tiene?
+----------- Modelo de dominio
+----------- Puertos
+----------- Adaptadores
+--------- ¿Qué ventajas y desventajas tiene?
+------- ¿La arquitectura limpia a qué se parece?
+------- ¿Qué es el centrado de datos y que ventajas e inconvenientes tiene?
+------- ¿Qué objetos son los Naked Objects? ¿Qué ventajas y desventajas tienen?
+------------------------------------------------------------------------------------------
+Tema 6: Estilos arquitectónicos en tiempo de ejecución: Comportamiento
+- Flujos de datos
+--- Secuencial - Batch
+----- ¿Qué es?
+----- ¿Qué elementos tiene?
+----- ¿Qué restricciones tiene?
+----- ¿Qué ventajas y desventajas tiene?
+------- ¿Qué es Throughput y Latencia?
+--- Pipes & Filters
+----- ¿Qué son?
+----- ¿Qué elementos tiene?
+----- ¿Qué restricciones tiene?
+----- ¿Qué ventajas y desventajas tiene?
+----- Pipes & Filters con interfaz uniforme
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+--------------------------
+Organización del trabajo
+--------------------------
+- Master-Slave
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+------------------------
+Sistemas interactivos
+------------------------
+- MVC
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- Variaciones del MVC
+----- PAC: Presentación-Abstracción-Control
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+------------------------
+Repositorio
+------------------------
+- Datos compartidos
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- Variante: Blackboard
+----- ¿Qué es?
+----- ¿Qué elementos tiene?
+----- ¿Qué restricciones tiene?
+----- ¿Qué ventajas y desventajas tiene?
+--- Variante: Sistema basado en reglas
+----- ¿Qué es?
+----- ¿Qué elementos tiene?
+----- ¿Qué restricciones tiene?
+----- ¿Qué ventajas y desventajas tiene?
+------------------------
+Invocación
+------------------------
+- Call-return
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+- Cliente-Servidor
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- Variantes
+----- Sin estado
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+----- Servidor replicado
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+----- Con caché
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+- Arquitectura basada en eventos
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- Variaciones
+----- Publish-subscribe
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene? 
+----- Modelos de actores
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+- CQRS (COmmand Query Responsability Seggregation)
+--- ¿En qué dos partes se divide?
+--- ¿Ventajas y desventajas?
+- Event Sourcing
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+---------------------
+Sistemas adaptables
+---------------------
+- Plugins
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+- Microkernel
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+- Reflection 
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+- Intérpretes y DSL 
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- Variaciones:
+----- DSL empotrados
+------- ¿Qué es?
+------- ¿Qué ventajas y desventajas tiene?
+- Código móvil 
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- Variantes:
+----- Código bajo demanda 
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+----- Evaluación remota 
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+----- Agentes móviles 
+------- ¿Qué es?
+------- ¿Qué elementos tiene?
+------- ¿Qué restricciones tiene?
+------- ¿Qué ventajas y desventajas tiene?
+-------------------------------------------------------------------------------------------
+Tema 7: Sistemas distribuidos. Sistemas escalables y Big data
+------------------------
+Estilos de integración
+------------------------
+- Transferencia de ficheros
+--- ¿Cómo funciona?
+--- ¿Qué ventajas y desventajas tiene?
+- Base de datos compartida
+--- ¿Cómo funciona?
+--- ¿Qué ventajas y desventajas tiene?
+- Invocación procedimiento remoto
+--- ¿Cómo funciona?
+--- ¿Qué ventajas y desventajas tiene?
+- Mensajería
+----------------------------
+Topologías de integración
+----------------------------
+- ¿De qué se encarga y qué hace Hub & Spoke?
+- Bus
+--- ¿Qué contiene cada app y qué estilo usa?
+--- ¿Qué es y que proporciona?
+- Patrón Bróker
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué ventajas y desventajas tiene?
+- Peer-to-Peer
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+----------------------------
+Servicios
+----------------------------
+- SOA - Service Oriented Architectures
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--- WS-*
+----- ¿Qué es el modelo WS-*?
+----- ¿Qué ventajas y desventajas tiene?
+--- REST - REpresentational State Transfer
+----- ¿Qué es?
+----- ¿Qué restricciones tiene?
+----- ¿Qué características tiene?
+------- ¿Qué es HATEOAS - (Hypermedia As The Engine of Application State)?
+----- ¿Qué ventajas y desventajas tiene?
+--- Arquitecturas basadas en servicios
+----- ¿Qué es?
+----- ¿Qué elementos tiene?
+----- ¿Qué restricciones tiene?
+----- ¿Qué ventajas y desventajas tiene?
+- Microservicios
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas tiene?
+----- Diversidad tecnológica
+----- Resiliencia
+----- Escalabilidad bajo demanda
+----- Desplegabilidad
+----- Alineación de la organización
+----- Gestión descentralizada de datos
+----- Optimización para sustitución
+--- Retos de los microservicios
+- Serverless
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+--------------------------------
+Sistemas escalables y Big Data
+--------------------------------
+- MapReduce
+--- ¿Qué es?
+--- ¿Qué elementos tiene?
+--- ¿Qué dos componentes tiene y que se hace con los datos?
+--- ¿De qué se encarga el entorno de ejecución?
+--- El sistema de ficheros HDFS
+----- ¿En qué consiste?
+----- ¿Qué dos tipos de nodos existen y qué hacen?
+--- ¿Qué ventajas y desventajas tiene?
+- Arquitectura lambda
+--- ¿Cuál es su objetivo?
+--- ¿En qué 3 capas se divide la arquitectura?
+----- Batch layer
+----- Speed layer
+----- Serving layer
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y desventajas tiene?
+- Arquitectura Kappa
+--- ¿Cuál es su objetivo?
+--- ¿Qué restricciones tiene?
+--- ¿Qué ventajas y retos tiene?
+-------------------------------------------------------------------------------------------
+Tema 8: Disposición (Allocation)
+- ¿Qué es la disposición?
+--------------------------------------------
+Empaquetamiento, distribución y despliegue
+--------------------------------------------
+- ¿Qué es y en qué consiste el empaquetamiento?
+- ¿Qué canales hay de distribución?
+---------------------
+Despliegue
+---------------------
+- Computación on premises
+--- ¿Qué es?
+--- ¿Qué ventajas y retos tiene?
+- Computación en la nube
+--- ¿Qué es?
+--- ¿Qué ventajas y retos tiene?
+- Edge computing
+--- ¿Qué es?
+--- ¿Qué ventajas y retos tiene?
+- Fog computing
+--- ¿Qué es?
+- Opciones de entornos de ejecución
+--- Máquinas físicas
+----- ¿Qué pueden ser?
+----- Ventajas y retos
+--- Máquinas virtuales
+----- ¿Qué es?
+----- Ventajas y retos
+--- Contenedores
+----- ¿Qué son los contenedores?
+----- ¿Qué es una imagen contenedor de imágenes Docker?
+----- ¿Qué son los contenedores Docker?
+----- ¿Qué es un registro Docker?
+----- Ventajas y desventajas de los contenedores
+- ¿Qué es el canal de despliegue?
+------------------------
+Software en producción
+------------------------
+- ¿Qué A.C hay en producción?
+--- Configurabilidad
+--- Observabilidad
+--- Disponibilidad
+--- Estabilidad
+--- Fiabilidad
+- ¿Qué es la monitorización?
+- ¿Qué tres problemas pueden ocurrir en sistemas?
+--- Falla (fault)
+--- Error
+--- Fallo (failure)
+- Patrones en producción
+--- Load balancing
+--- Timeouts
+--- Circuit breakers
+--- Bulkheads
+--- Steady state
+--- Fail fast
+--- Let it crash
+--- Handshaking
+--- Test harnesses
+--- Decoupling middleware
+--- Create backpressure
+--- Governor
+- Pruebas en producción
+--- ¿Qué es?
+--- Técnicas
+----- ¿Qué es Canary release?
+----- ¿Qué es feature toggles?
+--- Tipos de pruebas
+----- Pruebas A/B
+----- Multi-armed bandits
+- ¿Qué son las pruebas de carga y las de estrés?
+-----------------------------------------------------------------------------------------
+Tema 9: A.S y entorno empresarial
+-----------------------
+Software empresarial
+-----------------------
+- ERP - (Enterprise Resource Planning)
+--- Ventajas y problemas
+- CRM - Customer Relationship Management
+--- ¿Qué es?
+--- Ventajas y problemas
+- SCM - Supply Chain Management
+--- ¿Qué es?
+--- Ventajas y problemas
+- WMS - Warehause Management Software
+--- ¿Qué es?
+- ECM - Enterprise Content Management
+--- ¿Qué es?
+--- ¿Qué componentes tiene?
+- BPM - Business Process Management
+--- ¿Qué es?
+- PLM - Product Lifecycle Management
+--- ¿Qué es?
+- Siglas en comercio electrónico:
+--- B2B
+--- B2C
+--- C2C
+- EAI - Enterprise Application Integration
+--- ¿Qué es?
+- ¿Qué son las líneas de producto software?
+------------------------------------
+Software y servicios empresariales
+------------------------------------
+- ¿Hacia qué hay más tendencia, hacia los productos o a los servicios?
+- Terminología de servicios:
+--- Indicador a nivel de servicio (SLI)
+--- Objetivo a nivel de servicio (SLO)
+--- Acuerdo a nivel de servicio (SLA)
+- ¿Cómo son los proyectos "Legacy" o heredados?
+- ¿Cómo identificamos los hotspots o puntos calientes?
